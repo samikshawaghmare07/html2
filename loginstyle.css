@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Special+Gothic+Expanded+One&display=swap');
+
+body {
+    height: 100vh;
+    
+    background: url('../img/flower.jpg') no-repeat center / cover;
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container{
+    position: relative;
+    left: 15%;
+    top: 15%;
+    color: rgb(7, 6, 117);
+}
+
+h1{
+    font-size: 55px;
+}
+
+input{
+    outline: none;
+    border: none;
+    font-size: 18px;
+    border-bottom: 3px solid #ccc;
+    margin-bottom: 10px;
+    background: transparent;
+    color:#241f1f;
+}
+
+.btn{
+    outline: none;
+    border: none;
+    padding: 10px 40px;
+    background: royalblue;
+    color: aliceblue;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bolder;
+    border-radius: 16px;
+  
+
+}
+.btn:hover{
+    background: rgb(15, 15, 50);
+    
+}
