@@ -55,7 +55,7 @@ body {
 
 .hero button {
     padding: 10px 20px;
-    background: #d1db11;
+    background: #b30c0c;
     color: #161616;
     border: none;
     border-radius: 25px;
@@ -66,10 +66,10 @@ body {
 
 .hero button:hover {
     transform: scale(1.1);
-    background-color: #563c04;
+    background-color: #4b12e7;
 }
 
-/* Cards */
+
 .cards {
     display: flex;
     justify-content: center;
