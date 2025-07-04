@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Egg Timer</title>
+  <link rel="stylesheet" href="eggstyle.css">
+</head>
+
+<body>
+  <div class="container wider">
+    <h1>Egg Cooking Timer</h1>
+    <label>Set time (seconds): </label>
+    <input type="number" id="timeInput" min="1" value="10">
+    <br>
+    <button onclick="startTimer()">Start Timer</button>
+    <div id="timerDisplay">00:10</div>
+    <div class="egg">
+      <div class="chicken" id="chicken"></div>
+    </div>
+    <div id="message" class="message"></div>
+<button id="resetBtn" onclick="resetTimer()" style="display: none;">Reset</button>
+<audio id="dingSound" src="https://www.soundjay.com/buttons/sounds/button-3.mp3"></audio>
+
+  </div>
+
+ <script>
+  let timer;
+  let countdown;
+
+  function startTimer() {
+    const timeInput = document.getElementById('timeInput');
+    let seconds = parseInt(timeInput.value);
+    const timerDisplay = document.getElementById('timerDisplay');
+    const chicken = document.getElementById('chicken');
+    const message = document.getElementById('message');
+    const resetBtn = document.getElementById('resetBtn');
+    const dingSound = document.getElementById('dingSound');
+
+    clearInterval(timer);
+    chicken.classList.remove('pop');
+    message.textContent = "";
+    message.classList.remove('fade-bounce');
+    resetBtn.style.display = 'none';
+
+    countdown = seconds;
+    timerDisplay.textContent = formatTime(countdown);
+
+    timer = setInterval(() => {
+      countdown--;
+      timerDisplay.textContent = formatTime(countdown);
+
+      if (countdown <= 0) {
+        clearInterval(timer);
+        chicken.classList.add('pop');
+        message.textContent = "Your eggs are done!";
+        message.classList.add('fade-bounce');
+        dingSound.play();
+        resetBtn.style.display = 'inline-block';
+      }
+    }, 1000);
+  }
+
+  function resetTimer() {
+    clearInterval(timer);
+    document.getElementById('timerDisplay').textContent = "00:00";
+    document.getElementById('chicken').classList.remove('pop');
+    document.getElementById('message').textContent = "";
+    document.getElementById('message').classList.remove('fade-bounce');
+    document.getElementById('resetBtn').style.display = 'none';
+  }
+
+  function formatTime(seconds) {
+    const mins = Math.floor(seconds / 60).toString().padStart(2, '0');
+    const secs = (seconds % 60).toString().padStart(2, '0');
+    return `${mins}:${secs}`;
+  }
+</script>
+
+</body>
+
+</html>
