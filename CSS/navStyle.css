@@ -12,9 +12,6 @@ body {
     font-optical-sizing: auto;
     font-weight: bolder;
     font-style: normal;
-
-    background: url('../img/bg.jpg') no-repeat center / cover;
-    background-position: relative;
    
 }
 
@@ -38,6 +35,9 @@ a {
     color: rgb(135, 66, 72);
     text-decoration: none;
     font-size: large;
+    font-weight: bolder;
+    color: rgb(1, 9, 16);
+    border-radius: 0%;
 }
 
 i {
@@ -46,18 +46,100 @@ i {
 }
 
 a:hover {
-    color: black;
+    color: rgb(219, 166, 166);
 }
 
-h1 {
-    color: rgb(135, 66, 72);
-    margin: 20px;
-    padding: 23px;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
+
+.container{
+    height: 100vh;
+    display: flex;
+}
+
+.left{
+    height: 100vh;
+    width: 50vw;
+}
+
+.right{
+    height: 100vh;
+    width: 50vw;
+}
+
+.content{
+    position: relative;
+    top: 15%;
+    padding: 0px 50px;
+}
+
+.title{
+    color: rgb(3, 61, 61);
+
+    margin-top: 10px ;
+    font-size: 40px;
+    line-height: 50px;
+}
+
+.para{
+    margin-top: 10px;
+    line-height: 20px;
+}
+
+.btn{
+    outline: none;
+    border: none;
+    background: wheat;
+    border-radius: 40px;
+    color: black;
+    font-size: 18px;
     font-weight: bolder;
-    font-style: normal;
-    justify-self: center;
-    align-items: center;
+    padding: 10px 40px;
+    margin-top: 10px;
+    transition: 0.5s;
+}
+.btn:hover{
+    background: red;
+}
+.imgContainer{
+    position: relative;
+    top: 20%;
+    right: 5%;
+}
+
+.aboutContainer{
+    display: flex;
+    height: 100vh;
+   
+}
+
+.aboutTitle{
+     color: rgb(3, 61, 61);
+    margin-bottom: 10px ;
+    font-size: 40px;
+    line-height: 50px;
+
+}
+.aboutContent{
+    position: relative;
+    top: 15%;
+    padding: 0px 50px;
+    right: 10px;
+}
+
+.aboutRight{
+    height: 100vh;
+    width: 50vw;
+    position: relative;
+    right: 50px;
+}
+.aboutLeft{
+    height: 100vh;
+    width: 50vw;
+    position: relative;
+    left: 20px;
+}
+
+.aboutPara{
+     margin-top: 10px;
+    line-height: 20px;
 
 }
