@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navigation</title>
     <link rel="stylesheet" href="CSS/navStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
@@ -14,12 +16,11 @@
 
         <nav>
             <ul>
-                <i class="fa-solid fa-bars"></i>
-
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">services</a></li>
-                <li><a href="">contact us</a></li>
+                <i class="fa-brands fa-studiovinari" style="font-size: 40px;"></i>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">services</a></li>
+                <li><a href="#contact">contact us</a></li>
             </ul>
         </nav>
 
@@ -27,7 +28,7 @@
 
 
     <main>
-        <div class="container">
+        <div class="container" id="Home">
 
             <div class="left">
                 <div class="content">
@@ -41,14 +42,22 @@
             </div>
             <div class="right">
                 <div class="imgContainer">
-                    <img width="500" src="./img/art.jpg" alt="">
+                    <img data-aos="slide-up" width="400" src="./img/art1.png" alt="">
                 </div>
             </div>
         </div>
 
         <div class="aboutContainer">
 
-            <div class="aboutLeft">
+            <div class="aboutLeft" id="about">
+
+                <div class="aboutImgcon">
+                    <img data-aos="slide-up" width="500" src="./img/artbg1.png" alt="">
+                </div>
+            </div>
+
+            <div class="aboutRight">
+
                 <div class="aboutContent">
                     <h1 class="aboutTitle"> Get inspirations here</h1>
                     <div class="aboutPara"> Be inspired get inspired and make others inspire! <br>
@@ -56,17 +65,76 @@
                         Creative Inspiration & Stories
                     </div>
                     <button class="btn">Get started</button>
-                </div>
 
-            </div>
-            <div class="aboutRight">
-                <div class="aboutImgcon">
-                    <img width="500" src="./img/artbg.jpg" alt="">
                 </div>
             </div>
         </div>
+
+        <div class="servContainer" id="services">
+            <div class="servContent">
+                <div class="servLeft">
+
+                    <h1 class="title">Services</h1>
+                    <div class="servPara">At Artistic iSketch, we bring <br>imagination to life through a wide range of artistic services tailored to inspire, beautify, and connect.</div>
+                    <button class="btn">Services</button>
+                </div>
+
+                <div class="servRight">
+
+                    <div class="servImg">
+                        <img data-aos="slide-up" width="400" src="./img/enterbg.png" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="contactContainer" id="contact">
+            <div class="contactContent">
+                <div class="contactLeft">
+
+                    <h1>Sign up</h1>
+
+                    <form action="thankyou.html" method="get">
+                    <div class="box">
+                        
+                        <i class="fa-duotone fa-solid fa-circle-user"></i>
+                        <input type="email" placeholder="email">
+                    </div>
+
+                    <div class="box">
+                        <i class="fa-duotone fa-solid fa-lock"></i>
+                        <input type="password" placeholder="password">
+
+                        <div class="box">
+                            <i class="fa-duotone fa-solid fa-image-portrait"></i>
+                            <input type="number" placeholder="age">
+                            <br>
+                            <button class="btn" type="submit">Submit</button>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+                <div class="contactRight">
+                    <div class="contactImg">
+                        <img data-aos="slide-up" width="400" src="./img/cat.png" alt="">
+
+                    </div>
+                </div>
+            </div>
     </main>
 
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            delay: 200,
+            duration: 1000,
+        });
+    </script>
 </body>
 
 </html>
