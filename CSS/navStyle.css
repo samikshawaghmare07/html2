@@ -12,7 +12,6 @@ body {
     font-weight: 600;
     font-style: normal;
     background: url('../img/background.jpg') no-repeat center / cover fixed;
-    /* overflow: hidden; */
 }
 
 header {
@@ -40,13 +39,17 @@ a {
     border-radius: 0%;
 }
 
-i {
+.fa-brands {
+
     position: absolute;
-    top: 25px;
-    left: 50px;
-    size-adjust: 50%;
+    top: 20px;
+    left: 0px;
     display: flex;
+    size-adjust: 50%;
     padding: 5px;
+    font-size: 30px;
+    margin-left: 50px;
+
 }
 
 a:hover {
@@ -238,6 +241,7 @@ h1 {
 }
 
 .contactImg {
-    position: relative;
-    right: 35px;
+    position: absolute;
+    right: 100px;
+    /* top: 5px; */
 }
