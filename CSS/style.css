@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Special+Gothic+Expanded+One&display=swap');
+
+body {
+    height: 100vh;
+    background: url('../img/flower.jpg') no-repeat center / cover;
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container{
+    position: relative;
+    left: 25%;
+    top: 45%;
+    color: rgb(7, 6, 117);
+}
+
+h1{
+    font-size: 35px;
+}
+
